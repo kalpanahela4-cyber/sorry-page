@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Jaanu 🥺💗</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 85%;
+            width: 350px;
+            border: 2px solid #ffb6c1;
+            z-index: 10;
+            position: relative;
+        }
+        h1 { color: #d63384; font-size: 1.8em; margin-bottom: 10px; }
+        
+        /* Cute Animated Teddy Bear Box */
+        .cartoon-box {
+            background: #fff5f8;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
+            animation: bounceAnim 1.2s infinite alternate;
+        }
+        
+        .cartoon-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes bounceAnim {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-8px) scale(1.05); }
+        }
+        
+        p { font-size: 17px; color: #444; line-height: 1.5; margin-bottom: 20px; min-height: 80px; }
+        
+        .btn {
+            padding: 12px 30px;
+            font-size: 17px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+        .btn:hover { background-color: #d63384; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Working Cute Teddy Bear Couple GIF -->
+        <div class="cartoon-box">
+            <img src="https://media2.giphy.com/media/3o7TKMj508h25YD3Sg/giphy.gif" alt="Cute Teddy Bears">
+        </div>
+        <h1>I'm Sorry, jannu🥺💗</h1>
+        <p id="messageBox">Tap the button below, kuch kehna hai aapse... 💌</p>
+        <button class="btn" onclick="showMessage()">Read Message 💌</button>
+    </div>
+
+    <script>
+        const messages = [
+            "Dekho Bbu, humko maaf kar do... hum daant diye apne shona Bbu ko, ab se koi jhagda nahi! 🥺",
+            "Aur baki shak ki baat rahi... hum kyun shak karenge bolo? Hum us time gussa theee, 🥺",
+            "Aur ek cheez, jahan tak raha shaaq ka hum aap par andha bharosa karte hain, bas humko dar lagta hai ki aapko hum kho na dein... 😭",
+            "Itni mushkil se, qismaat se mili ho, meri ek lauti biwi ho tum! Tumse hum bahut pyaar karte hain 🥹🫶🏻🧿💗, apni jaan se bhi zyada... 🫶🏻🧿",
+            "Jo bhi ho, maaf kar do, hum nahi karenge ab jhagda. Sorry mera shona Bbu, mere ladoo, sorry Bbu, I love you infinite! 🥹🙌🏻🥺"
+        ];
+        let currentIndex = 0;
+        function showMessage() {
+            const msgBox = document.getElementById("messageBox");
+            const btn = document.querySelector(".btn");
+            if (currentIndex < messages.length) {
+                msgBox.innerHTML = messages[currentIndex];
+                currentIndex++;
+                if(currentIndex === messages.length) {
+                    btn.innerText = "Maaf kiya kya? 🥰";
+                } else {
+                    btn.innerText = "Next Message ➡️";
+                }
+            } else {
+                msgBox.innerHTML = "Ab Sab gussa khatam kroo? Bbu ab koi jhagra nhi na... ab jaldi se aao mere paas message kroo! 🥹🫶🏻🧿💗";
+                btn.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
